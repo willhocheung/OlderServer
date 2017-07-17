@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+
+
+
+
+<struts>
+
+    <constant name="struts.enable.DynamicMethodInvocation" value="true" />
+    <constant name="struts.devMode" value="false" />
+
+    <package name="default" namespace="/" extends="struts-default">
+
+     <action name="login" class="userAction.action" method="dologin">
+     </action>
+	<action name="get" class="userAction.action" method="SendList">	
+    	 
+    </action>
+    <action name="olderLogin" class="userAction.action" method="olderdologin">
+    </action>
+	<action name="olderLoginByToken" class="userAction.action" method="olderLoginByToken">	
+    	 
+     </action>
+     <action name="loginByToken" class="userAction.action" method="loginByToken">
+    	 
+     </action>
+     <action name="sendMessage" class="userAction.action" method="sendMessage">
+    	 
+     </action>
+     
+     <action name="sendAllInfo" class="userAction.action" method="sendAllInfo">
+    	 
+     </action>
+    </package>
+
+ 
+</struts>
